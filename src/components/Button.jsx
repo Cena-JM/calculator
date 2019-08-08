@@ -1,19 +1,29 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import './styles/Button.css';
 
 const isOperator = val => ['÷', 'x', '-', '+', '='].includes(val);
 
 const isZero = val => val === '0';
 
-const Button = props => (
+const Button = ({name, clickHandler}) => {
+    const handleClick = () => clickHandler(name);
+    return (
     <div 
     className={`button-wrapper ${
-        isOperator(props.children) ? 'operator' : null
+        isOperator(name) ? 'operator' : null
     } ${
-        isZero(props.children) ? 'zero' : ''
-    }`}>
-    {props.children}
+        isZero(name) ? 'zero' : ''
+    }`}
+    name={name}
+    onClick={handleClick}>{name}
     </div>
-);
+    );
+};
+
+Button.propTypes = {
+    clickHandler: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired
+};
 
 export default Button;

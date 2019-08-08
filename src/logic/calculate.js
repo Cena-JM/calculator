@@ -42,7 +42,7 @@ const calculate = (data, buttonName) => {
     case '+':
     case '-':
     case 'x':
-    case '/':
+    case '÷':
     case '%':
       if (newData.total === null || newData.total === '0') {
         newData.total = '0';
@@ -63,7 +63,7 @@ const calculate = (data, buttonName) => {
       break;
 
     case '=':
-      if (newData.next === '0' || newData.next === '/') {
+      if (newData.next === '0' || newData.next === '÷') {
         newData = {
         total: null,
         next: null,
@@ -77,7 +77,7 @@ const calculate = (data, buttonName) => {
       newData.next = null;
       break;
 
-      default: // if number is pressed
+      default:
       if (data.operation) {
         if (data.operation === '=') {
         newData = {
