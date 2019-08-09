@@ -15,7 +15,6 @@ const Button = ({name, clickHandler}) => {
     } ${
         isZero(name) ? 'zero' : ''
     }`}
-    name={name}
     onClick={handleClick}>{name}
     </div>
     );
