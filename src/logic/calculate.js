@@ -8,6 +8,7 @@ const calculate = (data, buttonName) => {
       total: '0',
       next: null,
       operation: null,
+      error: null,
     };
     break;
 
@@ -26,6 +27,7 @@ const calculate = (data, buttonName) => {
           total: '0.',
           next: null,
           operation: null,
+          error: null,
         };
       } else if (newData.next === null) {
         newData.next = '0.';
