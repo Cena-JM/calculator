@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "airbnb",
+    "extends": "eslint:recommended",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -19,5 +19,6 @@ module.exports = {
         "react"
     ],
     "rules": {
-    }
+    },
+    "parser": "babel-eslint"
 };

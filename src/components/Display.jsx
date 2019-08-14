@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './styles/Display.css'
 import PropTypes from 'prop-types';

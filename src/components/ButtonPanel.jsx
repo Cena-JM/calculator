@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Button from './Button';
 import './styles/ButtonPanel.css'
@@ -8,7 +9,7 @@ const ButtonPanel = ({clickHandler}) => {
                     'AC', '+/-', '%', '÷', '7', '8',
                     '9', 'x', '4', '5', '6', '-', '1',
                     '2', '3', '+', '0','.', '=',
-                    ].map((value, i) => (
+                    ].map((value) => (
         <Button
           clickHandler={handleClick}
           name={value}

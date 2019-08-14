@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles/Button.css';
@@ -10,10 +11,10 @@ const Button = ({name, clickHandler}) => {
     const handleClick = () => clickHandler(name);
     return (
     <div 
-    className={`button-wrapper ${
-        isOperator(name) ? 'operator' : null
-    } ${
-        isZero(name) ? 'zero' : ''
+    className={
+        `${
+        isOperator(name) ? 'operator button-wrapper' : 
+        isZero(name) ? 'zero button-wrapper' : 'button-wrapper'
     }`}
     onClick={handleClick}>{name}
     </div>

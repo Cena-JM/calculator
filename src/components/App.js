@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
@@ -6,7 +7,12 @@ import './styles/App.css'
 
 class App extends React.Component {
 
-  state = { total: null, next: null, operation: null, error: null };
+  state = { 
+    total: null,
+    next: null,
+    operation: null,
+    error: null,
+  };
 
   handleClick = buttonName => this.setState(prevState => (calculate(prevState, buttonName)));
 
