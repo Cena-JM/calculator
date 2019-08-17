@@ -1,38 +1,37 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Button from './Button';
 import './styles/ButtonPanel.css'
 
-const ButtonPanel = () => {
+const ButtonPanel = ({clickHandler}) => {
+    const handleClick = buttonName => clickHandler(buttonName);
+    const buttons = [ 
+                    'AC', '+/-', '%', '÷', '7', '8',
+                    '9', 'x', '4', '5', '6', '-', '1',
+                    '2', '3', '+', '0','.', '=',
+                    ].map((value) => (
+        <Button
+          clickHandler={handleClick}
+          name={value}
+          key={`button-${value}`}
+        />
+      ));
     return (
-        <div className="button-panel">
-            <div className="row">
-                <Button>AC</Button>
-                <Button>+/-</Button>
-                <Button>%</Button>
-                <Button>÷</Button>
+        <div className='button-panel'>
+            <div className='row'>
+                {buttons.slice(0, 4)}
             </div>
-            <div className="row">
-                <Button>7</Button>
-                <Button>8</Button>
-                <Button>9</Button>
-                <Button>x</Button>
+            <div className='row'>
+                {buttons.slice(4, 8)}
             </div>
-            <div className="row">
-                <Button>4</Button>
-                <Button>5</Button>
-                <Button>6</Button>
-                <Button>-</Button>
+            <div className='row'>
+                {buttons.slice(8, 12)}
             </div>
-            <div className="row">
-                <Button>1</Button>
-                <Button>2</Button>
-                <Button>3</Button>
-                <Button>+</Button>
+            <div className='row'>
+                {buttons.slice(12, 16)}
             </div>
-            <div className="row">
-                <Button>0</Button>
-                <Button>.</Button>
-                <Button className="side-panel">=</Button>
+            <div className='row'>
+                {buttons.slice(16, 19)}
             </div>
         </div>
     );
