@@ -3,6 +3,7 @@ This is a simple calculator developed with react. It purforms simple calculation
 
 ## Live - Version
 
+[Live](https://serene-hamlet-60393.herokuapp.com/)
 
 ## Contributors
 
